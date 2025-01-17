@@ -1,0 +1,54 @@
+---
+const tours = [
+    {
+        title: "FAUNA SILVESTRE EN PACAYA SAMIRIA",
+        days: "FULL DAY",
+        image: "/images/faunasilvestre.png",
+        description: "Combina adrenalina y relajación en un solo destino. Disfruta del Parque Acuático Inflable más grande de Sudamérica. Luego, relájate en la tranquila Playa La Mina, un paraíso de aguas cristalinas y vistas impresionantes. ¡Diversión asegurada para toda la familia!",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*CAMINO%20DEL%20INCA%202D%2F1N*."
+    },
+    {
+        title: "RESERVA NACIONAL PACAYA SAMIRIA",
+        days: "FULL DAY",
+        image: "/images/pacayasamiria.png",
+        description: "Ofrece una mezcla perfecta de naturaleza y aventura. Disfruta de las impresionantes Islas Ballestas en Paracas, hogar de una gran biodiversidad marina, y luego vive la emoción de las dunas de Huacachina, donde podrás practicar sandboarding y paseos en buggy. Un destino único para los amantes de la aventura y el paisaje desértico.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*CAMINO%20DEL%20INCA%204D%2F3N*."
+    }
+];
+---
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+           Vamos <br /> a conocer Iquitos
+        </h2>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+            {tours.map((tour) => (
+                <a href={tour.link} target="_blank" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition transform hover:-translate-y-1 hover:shadow-lg h-full">
+                    <div class="relative w-full h-[350px]">
+                        <img
+                            class="w-full h-[350px] object-cover rounded-t-lg mx-auto"
+                            src={tour.image}
+                            alt={tour.title}
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="flex flex-col justify-between p-5 h-full">
+                        <div>
+                            <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                {tour.title}
+                            </h5>
+                            <p class="text-sm font-semibold text-primary mb-3">{tour.days}</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 mb-5 line-clamp-3">
+                                {tour.description}
+                            </p>
+                        </div>
+                        <button class="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-md shadow-md transition duration-300 ease-in-out hover:scale-105">
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp ml-2"></i>
+                        </button>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

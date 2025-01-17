@@ -1,0 +1,96 @@
+---
+const tours = [
+    {
+        title: "CAMINO DEL INCA",
+        days: "2 DÍAS / 1 NOCHE",
+        image: "/images/caminosdelinca.png",
+        description: "El tour Camino del Inca 2 días ofrece una experiencia compacta de una de las rutas más icónicas de Perú, ideal para quienes no quieren perderse la magia y la aventura de este destino.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*CAMINO%20DEL%20INCA%202D%2F1N*."
+    },
+    {
+        title: "CAMINO DEL INCA",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/caminodelinca.png",
+        description: "El Camino del Inca 4 días es una caminata emblemática que recorre paisajes impresionantes, nubosos y sitios arqueológicos, brindando una inmersión profunda en el legado Inca.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*CAMINO%20DEL%20INCA%204D%2F3N*."
+    },
+    {
+        title: "TOUR A MACHU PICCHU",
+        days: "FULL DAY",
+        image: "/images/machupicchu.png",
+        description: "En nuestro tour a Machu Picchu, explorarás durante un día la majestuosa Ciudadela Inca, una maravilla mundial vayamos a descubrir su historia y sus secretos.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    },
+    {
+        title: "MONTAÑA DE COLORES",
+        days: "FULL DAY",
+        image: "/images/montañadecolores.png",
+        description: "La Montaña de Colores de Perú se ha convertido en una de las principales atracciones turísticas, atrayendo a viajeros de todo el mundo.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    },
+    {
+        title: "MONTAÑA DE COLORES",
+        days: "2 DÍAS / 1 NOCHE",
+        image: "/images/montañadecolores2.png",
+        description: "Esta aventura de 2 días se ha convertido en una de las principales elecciones turísticas, aventúrate con viajeros de todo el mundo.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    },
+    {
+        title: "TOUR 7 LAGUNAS AUSANGATE",
+        days: "2 DÍAS / 1 NOCHE",
+        image: "/images/lagunasausangate.png",
+        description: "Una hermosa caminata, donde se puede visitar hermosas lagunas de color verde turquesa, y estar cerca de Ausangate y Ayangate.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    },
+    {
+        title: "TREKKING AUSANGATE",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/trekkingausangate.png",
+        description: "El Nevado de Ausangate, imponente y legendario, se alza en el corazón de la cordillera andina, ofreciendo paisajes únicos y una conexión íntima con la naturaleza.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    },
+    {
+        title: "TREKKING LARES",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/trekkinglares.png",
+        description: "Durante el recorrido, tendrá la oportunidad de visitar pintorescos pueblos andinos y sumergirse en la riqueza cultural y natural de esta maravillosa región.",
+        link: "https://wa.me/51918024860?text=¡Hola!%20*American%20Trekking*%20Estoy%20interesado%20en%20el%20paquete%20*TOUR%20A%20MACHU%20PICCHU%201D*."
+    }
+];
+---
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto text-center px-4">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
+           Vamos <br /> a conocer Cusco
+        </h2>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {tours.map((tour) => (
+                <a href={tour.link} target="_blank" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition transform hover:-translate-y-1 hover:shadow-lg h-full">
+                    <div class="relative w-full h-[350px]">
+                        <img
+                            class="w-full h-[350px] object-cover rounded-t-lg mx-auto"
+                            src={tour.image}
+                            alt={tour.title}
+                            loading="lazy"
+                        />
+                    </div>
+                    <div class="flex flex-col justify-between p-5 h-full">
+                        <div>
+                            <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                                {tour.title}
+                            </h5>
+                            <p class="text-sm font-semibold text-primary mb-3">{tour.days}</p>
+                            <p class="text-sm text-gray-700 dark:text-gray-400 mb-5 line-clamp-3">
+                                {tour.description}
+                            </p>
+                        </div>
+                        <button class="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-md shadow-md transition duration-300 ease-in-out hover:scale-105">
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp ml-2"></i>
+                        </button>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>

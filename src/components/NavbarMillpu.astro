@@ -1,0 +1,94 @@
+<nav class="w-full bg-transparent py-4 px-6 absolute top-0 left-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+        <!-- Logo -->
+        <div class="w-auto">
+            <a href="/" aria-label="Inicio">
+                <img 
+                    src="/images/logomillpu.png" 
+                    alt="Logo" 
+                    class="h-16 md:h-16 lg:h-20 xl:h-24 w-auto"
+                >
+            </a>
+        </div>        
+
+        <!-- Menú en pantallas grandes -->
+        <ul class="hidden md:flex space-x-6 text-lg font-medium text-white">
+            <li>
+                <a href="/arequipa" class="hover:text-gray-300 transition">
+                    Arequipa
+                </a>
+            </li>
+            <li>
+                <a href="/puno" class="hover:text-gray-300 transition">
+                    Puno
+                </a>
+            </li>
+            <li>
+                <a href="/cusco" class="hover:text-gray-300 transition">
+                    Cusco
+                </a>
+            </li>
+            <li>
+                <a href="/iquitos" class="hover:text-gray-300 transition">
+                    Iquitos
+                </a>
+            </li>
+            <li>
+                <a href="/contacts" class="hover:text-gray-300 transition">
+                    Contáctanos
+                </a>
+            </li>
+        </ul>
+
+        <!-- Botón de menú móvil -->
+        <button id="menu-button" class="md:hidden text-white text-3xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="hidden absolute bg-black bg-opacity-65 w-full top-full left-0">
+        <ul class="flex flex-col space-y-4 py-6 px-4 text-center text-lg text-white">
+            <li>
+                <a href="/arequipa" class="hover:text-gray-300 transition">
+                    Arequipa
+                </a>
+            </li>
+            <li></li>
+                <a href="/puno" class="hover:text-gray-300 transition">
+                    Puno
+                </a>
+            </li>
+            <li>
+                <a href="/cusco" class="hover:text-gray-300 transition">
+                    Cusco
+                </a>
+            </li>
+            <li>
+                <a href="/iquitos" class="hover:text-gray-300 transition">
+                    Iquitos
+                </a>
+            </li>
+            <li>
+                <a href="/contacts" class="hover:text-gray-300 transition">
+                    Contáctanos
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        } else {
+        console.error('Elementos no encontrados en el DOM.');
+        }
+    });
+</script>

@@ -1,0 +1,100 @@
+---
+const slides = [
+    {
+        src: '/images/ayacucho-plaza.jpg',
+        alt: 'Recorre las sagradas tierras del Cusco, hogar del esplendor inca.',
+        title: 'Ayacucho',
+        description: 'Camina entre ruinas inmortales y siente la vibración del legado ancestral.',
+        whatsappLink: 'https://wa.link/zk4mja'
+    },
+    {
+        src: '/images/ica.jpg',
+        alt: 'La majestuosidad de los Andes bajo un cielo pintado por dioses.',
+        title: 'Ica',
+        description: 'Respira la pureza de los vientos andinos mientras conquistas alturas que cuentan historias.',
+        whatsappLink: 'https://wa.link/zk4mja'
+    },
+    {
+        src: '/images/Plaza-de-armas-del-cusco.jpg',
+        alt: 'Sumérgete en la maravilla más grande de los Andes y la historia inca.',
+        title: 'Cusco',
+        description: 'Desvela el misterio entre las nubes, donde la naturaleza abraza la perfección humana.',
+        whatsappLink: 'https://wa.link/zk4mja'
+    }
+];
+---
+<section id="slider" class="relative w-full h-screen overflow-hidden">
+    <div id="slides-container" class="flex h-full transition-transform ease-in-out duration-[2000ms]">
+        {slides.map((slide) => (
+            <div class="relative flex-shrink-0 w-full h-full">
+                <img src={slide.src} alt={slide.alt} class="slider-image w-full h-full object-cover transition-transform duration-2000ms transform scale-100"/>
+                <div class="absolute inset-0 bg-black bg-opacity-45 flex flex-col justify-center items-center text-center px-4 text-white">
+                    <h1 class="text-3xl sm:text-6xl font-bold font-adinda mb-6">
+                        {slide.title}
+                    </h1>
+                    <p class="text-lg sm:text-xl mb-8">
+                        {slide.description}
+                    </p>
+                    <a href={slide.whatsappLink} class="bg-white text-primary px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-transform">
+                        Consultar ahora
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+
+    <!-- Controles de navegación del slider -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, idx) => (
+            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-gray-300 transition-all" data-index={idx}></button>
+        ))}
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slidesContainer = document.getElementById('slides-container');
+        const buttons = document.querySelectorAll('button[data-index]');
+        const totalSlides = slidesContainer?.children.length ?? 0;
+        let currentIndex = 0;
+
+        if (!slidesContainer) return;
+
+        const updateSlide = (index) => {
+            if (!slidesContainer) return;
+
+            const offset = -index * 100;
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+            const images = slidesContainer.querySelectorAll('.slider-image');
+            images.forEach((img, idx) => {
+                if (idx === index) {
+                    img.classList.add('scale-110');
+                } else {
+                    img.classList.remove('scale-110');
+                }
+            });
+
+            buttons.forEach((btn, idx) => {
+                btn.classList.toggle('bg-gray-500', idx === index);
+            });
+        };
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                const button = event.target as HTMLButtonElement;
+                if (button) {
+                    const index = button.dataset.index;
+                    if (index) {
+                        currentIndex = parseInt(index, 10);
+                        updateSlide(currentIndex);
+                    }
+                }
+            });
+        });
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlide(currentIndex);
+        }, 5000);
+    });
+</script>
