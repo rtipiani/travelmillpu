@@ -52,7 +52,7 @@ const slides = [
 
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, idx) => (
-            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-primary" data-index={idx}></button>
+            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-primary" data-index={idx} aria-label="sliders"></button>
         ))}
     </div>
 </section>
