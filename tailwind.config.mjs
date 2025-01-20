@@ -6,7 +6,8 @@ export default {
 			colors: {
 				primary: '#ff2201',
 				secondary: '#ffe425',
-				info: '#03c2ca'
+				info: '#03c2ca',
+				millpubtn: '#5f0d00'
 			},
 			fontFamily: {
 				'Yesteryear': ['Yesteryear']
