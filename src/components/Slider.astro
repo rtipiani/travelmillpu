@@ -35,7 +35,7 @@ const slides = [
                     <p class="text-lg sm:text-xl mb-8">
                         {slide.description}
                     </p>
-                    <a href={slide.whatsappLink} class="bg-white text-primary px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-transform" target="_blank">
+                    <a href={slide.whatsappLink} class="bg-primary text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-transform" target="_blank">
                         Consultar ahora
                     </a>
                 </div>
@@ -43,16 +43,16 @@ const slides = [
         ))}
     </div>
 
-    <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info">
+    <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-secondary bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info" aria-label="Anterior">
         <i class="fas fa-chevron-left text-2xl"></i>
     </button>
-    <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info">
+    <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-secondary bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info" aria-label="Siguiente">
         <i class="fas fa-chevron-right text-2xl"></i>
     </button>
 
     <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {slides.map((_, idx) => (
-            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-info" data-index={idx}></button>
+            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-primary" data-index={idx}></button>
         ))}
     </div>
 </section>
@@ -73,7 +73,7 @@ const slides = [
             const offset = -index * 100;
             slidesContainer.style.transform = `translateX(${offset}%)`;
             buttons.forEach((btn, idx) => {
-                btn.classList.toggle('bg-secondary', idx === index);
+                btn.classList.toggle('bg-primary', idx === index);
             });
         };
 
