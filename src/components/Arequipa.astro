@@ -3,14 +3,14 @@ const tours = [
     {
         title: "TOUR CAÑON DEL COLCA",
         days: "FULL DAY",
-        image: "/images/colca.png",
+        image: "/images/colca.webp",
         description: "Embárcate en una aventura única hacia el Cañón del Colca, uno de los cañones más profundos del mundo. Disfruta de impresionantes paisajes montañosos, el avistamiento de cóndores y la inmersión en la cultura local de los pueblos andinos que habitan esta región. Ideal para los amantes de la naturaleza, la historia y la aventura, el tour te permitirá explorar este asombroso destino de una manera inolvidable.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20CAÑON%20DEL%20COLCA*."
     },
     {
         title: "CAÑON DEL COLCA + CHIVAY",
         days: "2 DÍAS / 1 NOCHE",
-        image: "/images/chivay.png",
+        image: "/images/chivay.webp",
         description: "Disfruta de una experiencia inolvidable combinando el impresionante Cañón del Colca con la pintoresca localidad de Chivay. Vive la emoción de explorar uno de los cañones más profundos del mundo, mientras observas a los majestuosos cóndores en su vuelo. Luego, relájate en las aguas termales de Chivay y conoce la riqueza cultural de esta región andina. Un destino ideal para los viajeros que buscan belleza natural, aventura y tradición en un solo viaje.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CAÑON%20DEL%20COLCA%20%2B%20CHIVAY%202%20DÍAS%20%2F%201%20NOCHE*."
     }
@@ -25,12 +25,7 @@ const tours = [
             {tours.map((tour) => (
                 <a href={tour.link} target="_blank" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition transform hover:-translate-y-1 hover:shadow-lg h-full">
                     <div class="relative w-full h-[350px]">
-                        <img
-                            class="w-full h-[350px] object-cover rounded-t-lg mx-auto"
-                            src={tour.image}
-                            alt={tour.title}
-                            loading="lazy"
-                        />
+                        <img class="w-full h-[350px] object-cover rounded-t-lg mx-auto" src={tour.image} alt={tour.title} loading="lazy" />
                     </div>
                     <div class="flex flex-col justify-between p-5 h-full">
                         <div>

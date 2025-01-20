@@ -10,11 +10,11 @@
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-12">
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col">
+            <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col">
                 <h3 class="text-2xl lg:text-3xl font-semibold text-primary mb-6">
                     Formulario de Contacto
                 </h3>
-                <form id="contact-form" action="https://api.emailjs.com/api/v1.0/email/send-form" method="POST" class="flex-grow flex flex-col">
+                <form id="contact-form" class="flex-grow flex flex-col" onsubmit="handleSubmit(event)">
                     <div class="mb-6">
                         <label for="name" class="block text-left text-sm font-medium text-gray-700">
                             Nombres y Apellidos
@@ -47,31 +47,63 @@
                 </form>
             </div>
 
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow flex flex-col">
-                <h3 class="text-2xl lg:text-3xl font-semibold text-primary mb-6">
+            <div class="bg-white p-8 rounded-lg shadow-lg flex flex-col">
+                <h3 class="text-2xl lg:text-2xl font-semibold text-primary mb-1">
                     Información de Contacto
                 </h3>
-                <p class="text-base lg:text-lg text-gray-600 mb-6 leading-relaxed">
+                <p class="text-base lg:text-md text-gray-600 mb-2 leading-relaxed">
                     Contáctanos directamente a través de los siguientes medios:
                 </p>
-                <ul class="space-y-6 flex-grow">
+                <ul class="space-y-4 flex-grow">
                     <li class="flex flex-col items-center space-y-2">
                         <i class="fas fa-envelope text-primary text-xl"></i>
-                        <a href="mailto:contacto@travelmillpu.com" class="text-gray-700 hover:text-primary-dark text-sm truncate max-w-full text-center">
-                            contacto@travelmillpu.com
+                        <a href="mailto:travelmillpu@gmail.com" class="text-gray-700 hover:text-primary text-sm truncate max-w-full text-center">
+                            travelmillpu@gmail.com
                         </a>
                     </li>
                     <li class="flex flex-col items-center space-y-2">
                         <i class="fas fa-phone-alt text-primary text-xl"></i>
-                        <a href="tel:+123456789" class="text-gray-700 hover:text-primary-dark text-sm text-center">
+                        <a href="tel:+51969188876" class="text-gray-700 hover:text-primary text-sm text-center">
                             +51 969 188 876
                         </a>
                     </li>
+
+                    <ul class="space-y-4">
+                        <h4 class="text-xl text-primary font-semibold mt-2">
+                            Detalles Bancarios y Razón Social
+                        </h4>
+                        <li>
+                            <p class="text-gray-700 text-sm">
+                                <strong>BCP:</strong> 191-93882157-0-59
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <strong>Interbank:</strong> 898-3266335-5-65 <br />
+                                <strong>CCI Interbank:</strong>
+                                00389801326633556540
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <strong>PayPal:</strong> 
+                                <a href="https://paypal.me/travelmillpu" class="text-primary hover:underline" target="_blank">
+                                    paypal.me/travelmillpu
+                                </a>
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <strong>Yape/Plin:</strong>
+                                969 188 876
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <strong>Razón Social:</strong> Travel Millpu S.A.C.
+                            </p>
+                            <p class="text-gray-700 text-sm">
+                                <strong>RUC:</strong> 20610364587
+                            </p>
+                        </li>
+                    </ul>
                     <li class="space-y-4">
                         <div class="flex flex-col items-center space-y-2">
                             <i class="fas fa-map-marker-alt text-primary text-xl"></i>
                             <p class="text-gray-700 text-sm text-center">
-                                Pasaje José Olaya 128, Urb. los pinos - San Luis
+                                Pasaje José Olaya 128, Urb. los Pinos - San Luis
                             </p>
                         </div>
                         <div class="w-full rounded-md overflow-hidden shadow-md">
@@ -80,12 +112,14 @@
                         </div>
                     </li>
                 </ul>
+            
             </div>
+            
         </div>
     </div>
 </section>
 
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 <script type="text/javascript">
@@ -114,4 +148,34 @@
                 alert('Hubo un error al enviar el mensaje. Inténtalo nuevamente.');
             });
     });
-</script>
+</script> -->
+
+<script>
+    async function handleSubmit(event) {
+      event.preventDefault();
+  
+      const form = event.target;
+      const formData = new FormData(form);
+  
+      const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        message: formData.get("message"),
+      };
+  
+      const response = await fetch("../api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+  
+      const result = await response.json();
+  
+      if (result.success) {
+        alert("Mensaje enviado correctamente.");
+        form.reset();
+      } else {
+        alert("Error al enviar el mensaje: " + result.error);
+      }
+    }
+  </script>

@@ -7,6 +7,9 @@ export default {
 				primary: '#ff2201',
 				secondary: '#ffe425',
 				info: '#03c2ca'
+			},
+			fontFamily: {
+				'Yesteryear': ['Yesteryear']
 			}
 		},
 	},

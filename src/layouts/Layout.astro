@@ -1,26 +1,82 @@
 ---
+import '../styles/global.css';
 const meta = {
 	title: "Travel Millpu | Agencia de viajes en Ayacucho | Agencia de Viajes en Perú | Tours Machu Picchu | Tours en Cusco",
-	description: "Más de 10 años de experiencia, como lider en turismo, brindando servicios de calidad que hará que tu expediencia de viaje sea inolvidable.",
-	url: "https://americantrekkingcusco.com/",
+	description: "Nuestro principal objetivo es contribuir al desarrollo de la industria turística peruana con el principal objetivo de ayudarla a crecer de forma competitiva y equilibrada. Además de ser un factor de desarrollo  económico, cultural y sostenible, brindando un servicio integro de optima calidad.", url: "https://travelmillpu.com/",
 };
-import '/src/assets/styles/global.css';
 ---
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta property="og:locale" content="es_PE" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="index, follow" />
+		<meta name="author" content="Rubén Tipiani" />
+		<meta name="copyright" content="Copyright (c) 2025 Travel Millpu" />
+		<meta name="description" content={meta.description} />
 		<title>{meta.title}</title>
+		<meta property="og:site_name" content="Travel Millpu" />
+		<meta property="og:title" content={meta.title} />
+		<meta property="og:description" content={meta.description} />
+		<meta property="og:image" content="https://www.travelmillpu.com/images/imagen_de_previsualizacion.png" />
+		<meta property="og:url" content={meta.url} />
+		<meta property="og:type" content="website" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:type" content="image/png" />
+
+		<link rel="canonical" href="https://www.travelmillpu.com/" />
+		<link rel="icon" href="https://www.travelmillpu.com/favicon.ico" type="image/x-icon" />
+	
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={meta.title} />
+		<meta name="twitter:description" content={meta.description} />
+		<meta name="twitter:image" content="https://www.travelmillpu.com/images/imagen_de_previsualizacion.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-2L98EGJ2RK"></script>
+		<script defer>
+		// Google Analytics
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			window.dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'G-2L98EGJ2RK');
+		</script>
+
+		<!-- Google Tag Manager de manera diferida -->
+		<script defer>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+			var f = d.getElementsByTagName(s)[0];
+			if (f && f.parentNode) {
+			var j = d.createElement(s);
+			var dl = l !== 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+			}
+		})(window, document, 'script', 'dataLayer', 'GTM-PHD8X5D5');
+		</script>
 	</head>
 	<body>
 		<slot />
-		<a href="https://wa.me/51969188876?text=Hola%20*Travel%20Millpu*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20tur%C3%ADsticos." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-110" aria-label="Ir a Whatsapp">
+		<a href="https://wa.me/51969188876?text=Hola%20*Travel%20Millpu*,%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20paquetes%20tur%C3%ADsticos." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl hover:bg-green-600 transition duration-300 transform hover:scale-110" aria-label="Ir a Whatsapp">
 			<i class="fa-brands fa-whatsapp text-2xl"></i>
 		</a>		
 
 		<a href="#top" class="fixed bottom-24 right-8 z-50 p-3 bg-primary text-white rounded-full shadow-xl hover:bg-secondary transition duration-300" aria-label="Ir al inicio de la página">
 			<i class="fa-solid fa-arrow-up text-xl"></i>
 		</a>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHD8X5D5"
+			height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
 	</body>
 </html>
