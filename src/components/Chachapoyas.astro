@@ -1,0 +1,96 @@
+---
+const tours = [
+    {
+        title: "CHACHAPOYAS ESENCIAL",
+        days: "3 DÍAS / 2 NOCHES",
+        image: "/images/chachapoyas_esencial.avif",
+        description:
+            "El paquete definitivo para conocer lo mejor del norte. Un recorrido completo que combina la majestuosidad arqueológica de Kuélap, la imponente naturaleza de la catarata de Gocta y los impresionantes paisajes de los cañones. Diseñado para ofrecer una experiencia integral de aventura, historia y conexión profunda con la naturaleza amazónica.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20ESENCIAL%203D%2F2N*.",
+    },
+    {
+        title: "TOUR FORTALEZA KUÉLAP Y TELEFÉRICO",
+        days: "FULL DAY",
+        image: "/images/kuelap.avif",
+        description:
+            "Descubre el 'Machu Picchu del Norte', la enigmática fortaleza de piedra construida por la cultura Chachapoyas en lo alto de los Andes amazónicos. Disfruta del emocionante viaje en el primer teleférico del Perú, cruzando profundos valles con vistas panorámicas inigualables hasta llegar a este mágico complejo arqueológico.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20FORTALEZA%20KUÉLAP%20Y%20TELEFÉRICO*.",
+    },
+    {
+        title: "TOUR CATARATA DE GOCTA",
+        days: "FULL DAY",
+        image: "/images/gocta.avif",
+        description:
+            "Embárcate en una caminata por el exuberante bosque de neblina hasta llegar a una de las cataratas más altas y hermosas del mundo. Siente la brisa y la energía del agua cayendo desde más de 700 metros de altura, mientras observas la flora y fauna endémica, como el icónico Gallito de las Rocas.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20CATARATA%20DE%20GOCTA*.",
+    },
+    {
+        title: "TOUR A LA RUTA DE LOS CAÑONES",
+        days: "MEDIO DÍA",
+        image: "/images/canones.avif",
+        description:
+            "Experimenta la inmensidad de los paisajes de la región Amazonas visitando el espectacular Cañón del Sonche. Asómate a sus miradores y maravíllate con la profundidad y belleza escarpada de las montañas. Una excursión perfecta para los amantes de la fotografía y las vistas panorámicas dramáticas.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20tour%20*RUTA%20DE%20LOS%20CAÑONES*.",
+    },
+];
+---
+
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4"
+            >
+                Vamos a conocer <span class="text-primary">Chachapoyas</span>.
+            </h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                Descubre los misterios de la selva montañosa y la grandeza de las culturas del norte.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {
+                tours.map((tour) => (
+                    <a
+                        href={tour.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 h-full"
+                    >
+                        <div class="relative w-full h-[400px] overflow-hidden bg-gray-200 shrink-0">
+                            <img
+                                class="w-full h-full object-cover"
+                                src={tour.image}
+                                alt={tour.title}
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-black text-primary shadow-sm tracking-wide">
+                                {tour.days}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between p-6 h-full">
+                            <div class="text-left mb-6">
+                                <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                                    {tour.title}
+                                </h3>
+                                <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                    {tour.description}
+                                </p>
+                            </div>
+
+                            <button class="w-full mt-auto inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
+                                Consultar Ahora
+                                <i
+                                    class="fab fa-whatsapp ml-2 text-lg"
+                                    aria-hidden="true"
+                                />
+                            </button>
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</section>
