@@ -1,21 +1,21 @@
 ---
 const slides = [
     {
-        src: '/images/slide1.webp',
+        src: '/images/slide1.avif',
         alt: 'Sumérgete en Ayacucho, un lugar donde cada rincón narra historias de un pasado glorioso.',
         title: 'Ayacucho',
         description: 'Sumérgete en Ayacucho, un lugar donde cada rincón narra historias de un pasado glorioso.',
         whatsappLink: 'https://wa.me/+51969188876?text=Hola%20*Travel%20Millpu*%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20paquetes%20tur%C3%ADsticos%20a%20Ayacucho.'
     },
     {
-        src: '/images/slide2.webp',
+        src: '/images/slide2.avif',
         alt: 'Disfruta de paisajes mientras exploras viñedos, oasis y tradiciones que cautivan a los viajeros.',
         title: 'Ica',
         description: 'Disfruta de paisajes mientras exploras viñedos, oasis y tradiciones que cautivan a los viajeros.',
         whatsappLink: 'https://wa.me/+51969188876?text=Hola%20*Travel%20Millpu*%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20paquetes%20tur%C3%ADsticos%20a%20Ica.'
     },
     {
-        src: '/images/slide3.webp',
+        src: '/images/slide3.avif',
         alt: 'Sumérgete en la maravilla más grande de los Andes y la historia inca.',
         title: 'Cusco',
         description: 'Adéntrate en Cusco, el corazón del Imperio Inca, donde el misterio y la historia se encuentran.',
@@ -27,33 +27,38 @@ const slides = [
     <div id="slides-container" class="flex h-full transition-transform duration-1000">
         {slides.map((slide) => (
             <div class="relative flex-shrink-0 w-full h-full">
-                <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover" />
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4 text-white">
-                    <h1 class="text-4xl sm:text-6xl lg:text-8xl font-Yesteryear mb-4">
-                        {slide.title}
-                    </h1>
-                    <h6 class="text-lg sm:text-xl mb-8">
+                <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover" decoding="async" />
+                <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-16 md:px-32">
+                    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-Yesteryear text-white [text-shadow:_0_4px_10px_rgb(0_0_0_/_100%)] mb-4 py-2">
+                        <span class="inline-block pr-4">{slide.title}</span>
+                    </h2>
+                    <p class="text-lg sm:text-xl md:text-2xl text-white font-light drop-shadow-lg mb-8 max-w-2xl mx-auto">
                         {slide.description}
-                    </h6>
-                    <a href={slide.whatsappLink} class="bg-millpubtn text-white px-6 py-2 rounded-full font-semibold hover:bg-opacity-90 transition-transform" target="_blank">
+                    </p>
+                    <a href={slide.whatsappLink} class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer">
                         Consultar ahora
-                        <i class="fab fa-whatsapp"> </i>
+                        <i class="fab fa-whatsapp ml-2" aria-hidden="true"> </i>
                     </a>
                 </div>
             </div>
         ))}
     </div>
 
-    <button id="prev-slide" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-secondary bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info" aria-label="Anterior">
-        <i class="fas fa-chevron-left text-2xl"></i>
+    <button id="prev-slide" class="absolute top-1/2 left-4 md:left-8 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 z-10" aria-label="Anterior">
+        <i class="fas fa-chevron-left text-xl" aria-hidden="true"></i>
     </button>
-    <button id="next-slide" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-secondary bg-opacity-70 text-white w-12 h-12 rounded-full flex items-center justify-center hover:bg-info" aria-label="Siguiente">
-        <i class="fas fa-chevron-right text-2xl"></i>
+    <button id="next-slide" class="absolute top-1/2 right-4 md:right-8 transform -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white hover:text-black transition-all duration-300 z-10" aria-label="Siguiente">
+        <i class="fas fa-chevron-right text-xl" aria-hidden="true"></i>
     </button>
 
-    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-3 z-10">
         {slides.map((_, idx) => (
-            <button type="button" class="w-4 h-4 bg-gray-100 rounded-full hover:bg-primary" data-index={idx} aria-label="sliders"></button>
+            <button 
+                type="button" 
+                class={`h-2.5 rounded-full transition-all duration-300 ${idx === 0 ? 'w-8 bg-primary' : 'w-2.5 bg-white/50'} hover:bg-white/80`} 
+                data-index={idx} 
+                aria-label={`Ir al slide ${idx + 1}`}
+            ></button>
         ))}
     </div>
 </section>
@@ -74,7 +79,13 @@ const slides = [
             const offset = -index * 100;
             slidesContainer.style.transform = `translateX(${offset}%)`;
             buttons.forEach((btn, idx) => {
-                btn.classList.toggle('bg-primary', idx === index);
+                if (idx === index) {
+                    btn.classList.add('w-8', 'bg-primary');
+                    btn.classList.remove('w-2.5', 'bg-white/50');
+                } else {
+                    btn.classList.add('w-2.5', 'bg-white/50');
+                    btn.classList.remove('w-8', 'bg-primary');
+                }
             });
         };
 

@@ -3,48 +3,64 @@ const tours = [
     {
         title: "FAUNA SILVESTRE EN PACAYA SAMIRIA",
         days: "FULL DAY",
-        image: "/images/faunasilvestre.webp",
+        image: "/images/faunasilvestre.avif",
         description: "Combina adrenalina y relajación en un solo destino. Disfruta del Parque Acuático Inflable más grande de Sudamérica. Luego, relájate en la tranquila Playa La Mina, un paraíso de aguas cristalinas y vistas impresionantes. ¡Diversión asegurada para toda la familia!",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*FAUNA%20SILVESTRE%20EN%20PACAYA%20SAMIRIA%20FULL%20DAY*."
     },
     {
         title: "RESERVA NACIONAL PACAYA SAMIRIA",
         days: "FULL DAY",
-        image: "/images/pacayasamiria.webp",
+        image: "/images/pacayasamiria.avif",
         description: "Ofrece una mezcla perfecta de naturaleza y aventura. Disfruta de las impresionantes Islas Ballestas en Paracas, hogar de una gran biodiversidad marina, y luego vive la emoción de las dunas de Huacachina, donde podrás practicar sandboarding y paseos en buggy. Un destino único para los amantes de la aventura y el paisaje desértico.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*RESERVA%20NACIONAL%20PACAYA%20SAMIRIA%20FULL%20DAY*."
     }
 ];
 ---
-<section class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto text-center px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12">
-           Vamos <br /> a conocer Iquitos
-        </h2>
-        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+                Vamos a conocer <span class="text-primary">Iquitos</span>.
+            </h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                Adéntrate en el corazón de la Amazonía y vive una conexión pura con la naturaleza.
+            </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tours.map((tour) => (
-                <a href={tour.link} target="_blank" class="flex flex-col bg-white border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 transition transform hover:-translate-y-1 hover:shadow-lg h-full">
-                    <div class="relative w-full h-[350px]">
+                <a
+                    href={tour.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 h-full"
+                >
+                    <div class="relative w-full h-[400px] overflow-hidden bg-gray-200 shrink-0">
                         <img
-                            class="w-full h-[350px] object-cover rounded-t-lg mx-auto"
+                            class="w-full h-full object-cover"
                             src={tour.image}
                             alt={tour.title}
                             loading="lazy"
+                            decoding="async"
                         />
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-black text-primary shadow-sm tracking-wide">
+                            {tour.days}
+                        </div>
                     </div>
-                    <div class="flex flex-col justify-between p-5 h-full">
-                        <div>
-                            <h5 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    
+                    <div class="flex flex-col justify-between p-6 h-full">
+                        <div class="text-left mb-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
                                 {tour.title}
-                            </h5>
-                            <p class="text-sm font-semibold text-primary mb-3">{tour.days}</p>
-                            <p class="text-sm text-gray-700 dark:text-gray-400 mb-5 line-clamp-3">
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
                                 {tour.description}
                             </p>
                         </div>
-                        <button class="w-full inline-flex items-center justify-center px-4 py-2 bg-primary text-white rounded-md shadow-md transition duration-300 ease-in-out hover:scale-105">
+                        
+                        <button class="w-full mt-auto inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
                             Consultar Ahora
-                            <i class="fab fa-whatsapp ml-2"></i>
+                            <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true"></i>
                         </button>
                     </div>
                 </a>

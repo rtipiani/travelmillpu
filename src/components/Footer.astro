@@ -1,97 +1,80 @@
-<section class="bg-primary text-white py-8">
-    <div class="container mx-auto px-6 md:px-12">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-xl text-secondary font-semibold text-center mb-4">
-                    Travel Millpu
+<footer class="bg-gray-950 text-gray-300 py-16 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+            <!-- Columna 1: Info -->
+            <div class="space-y-6">
+                <h3 class="text-2xl font-extrabold text-white tracking-tight">
+                    Travel <span class="text-primary">Millpu</span>
                 </h3>
-                <p class="text-center">
-                    Nuestro principal objetivo es contribuir al desarrollo de la industria turística Peruana. Además de ser un factor de desarrollo  económico, cultural y sostenible, brindando un servicio integro de optima calidad.
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Nuestro principal objetivo es contribuir al desarrollo de la industria turística peruana de forma económica, cultural y sostenible, brindando un servicio íntegro de óptima calidad.
                 </p>
-            </div>
-
-            <div class="flex flex-col items-center">
-                <h3 class="text-xl text-secondary font-semibold text-center mb-4">
-                    Contáctenos
-                </h3>
-                
-                <p class="mb-2 text-center">
-                    <strong>Correo:</strong> 
-                    <a href="mailto:travelmillpu@gmail.com" class="text-white hover:text-olive" aria-label="Enviar un correo electrónico a travelmillpu@gmail.com">
-                        travelmillpu@gmail.com
-                    </a>
-                </p>
-                <p class="text-center mb-4">
-                    <strong>Teléfono:</strong> 
-                    <a href="tel:969188876" class="text-white hover:text-olive" aria-label="Llamar al número 969188876">
-                        +51 969 188 876
-                    </a>
-                </p>
-
-                <div class="">
-                    <img src="../images/mincetur.avif" alt="Logo de Mincetur" class="w-full h-auto" loading="lazy" />
+                <div class="pt-2">
+                    <img src="/images/mincetur.avif" alt="Logo de Mincetur" class="w-40 opacity-70 hover:opacity-100 transition-opacity" loading="lazy" decoding="async" />
                 </div>
             </div>
 
+            <!-- Columna 2: Contacto -->
             <div>
-                <h3 class="text-xl text-secondary font-semibold text-center mb-4">
-                    Medios de Pago
-                </h3>
-                <div class="flex justify-evenly space-x-1">
-                    <i class="fab fa-cc-visa text-white text-3xl p-1 rounded-full"></i>
-                    <i class="fab fa-cc-mastercard text-white text-3xl p-1 rounded-full"></i>
-                    <i class="fab fa-paypal text-white text-3xl p-1 rounded-full"></i>
-                    <i class="fab fa-cc-amex text-white text-3xl p-1 rounded-full"></i>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Contáctenos</h3>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="mailto:travelmillpu@gmail.com" class="flex items-center hover:text-primary transition-colors group">
+                            <i class="fas fa-envelope text-gray-500 group-hover:text-primary mr-3 w-5 text-center" aria-hidden="true"></i>
+                            <span class="text-sm">travelmillpu@gmail.com</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:969188876" class="flex items-center hover:text-primary transition-colors group">
+                            <i class="fas fa-phone-alt text-gray-500 group-hover:text-primary mr-3 w-5 text-center" aria-hidden="true"></i>
+                            <span class="text-sm">+51 969 188 876</span>
+                        </a>
+                    </li>
+                    <li class="flex items-start text-sm text-gray-400">
+                        <i class="fas fa-map-marker-alt text-gray-500 mt-1 mr-3 w-5 text-center" aria-hidden="true"></i>
+                        <span>Pasaje José Olaya 128<br>Urb. los Pinos, San Luis - Lima</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Medios de Pago -->
+            <div>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Medios de Pago</h3>
+                <p class="text-sm text-gray-400 mb-4">Aceptamos todas las tarjetas y transferencias seguras.</p>
+                <div class="flex flex-wrap gap-3">
+                    <div class="w-12 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="fab fa-cc-visa text-2xl text-gray-300" aria-hidden="true"></i></div>
+                    <div class="w-12 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="fab fa-cc-mastercard text-2xl text-gray-300" aria-hidden="true"></i></div>
+                    <div class="w-12 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="fab fa-paypal text-2xl text-gray-300" aria-hidden="true"></i></div>
+                    <div class="w-12 h-8 bg-gray-800 rounded flex items-center justify-center hover:bg-gray-700 transition-colors"><i class="fab fa-cc-amex text-2xl text-gray-300" aria-hidden="true"></i></div>
                 </div>
             </div>
 
+            <!-- Columna 4: Redes -->
             <div>
-                <h3 class="text-xl text-secondary font-semibold text-center mb-4">
-                    Síguenos
-                </h3>
-                <div class="flex justify-evenly space-x-1">
-                    <a href="https://www.facebook.com/p/Travel-Millpu-100088864190405/" 
-                       class="text-white hover:text-secondary"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       aria-label="Visita nuestra página de Facebook">
-                        <i class="fab fa-facebook-f fa-2xl"></i>
+                <h3 class="text-sm font-bold text-white uppercase tracking-wider mb-6">Síguenos</h3>
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/p/Travel-Millpu-100088864190405/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-gray-300 hover:text-white transition-all transform hover:-translate-y-1" aria-label="Facebook">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.instagram.com/" 
-                       class="text-white hover:text-secondary"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       aria-label="Visita nuestra página de Instagram">
-                        <i class="fab fa-instagram fa-2xl"></i>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-gray-300 hover:text-white transition-all transform hover:-translate-y-1" aria-label="Instagram">
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.youtube.com/" 
-                       class="text-white hover:text-secondary"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       aria-label="Visita nuestro canal de YouTube">
-                        <i class="fab fa-youtube fa-2xl"></i>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-gray-300 hover:text-white transition-all transform hover:-translate-y-1" aria-label="YouTube">
+                        <i class="fab fa-youtube" aria-hidden="true"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@travelmillpu" 
-                       class="text-white hover:text-secondary"
-                       target="_blank" 
-                       rel="noopener noreferrer" 
-                       aria-label="Visita nuestra cuenta de TikTok">
-                        <i class="fab fa-tiktok fa-2xl"></i>
+                    <a href="https://www.tiktok.com/@travelmillpu" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary text-gray-300 hover:text-white transition-all transform hover:-translate-y-1" aria-label="TikTok">
+                        <i class="fab fa-tiktok" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="mt-8 text-white text-center">
-            <p>
-                &copy; 2025 Travel Millpu - Todos los derechos reservados. | RUC: 20604628998
-            </p>
-            <p>
-                Diseñado por 
-                <a href="https://www.facebook.com/rubenestebantipiania/" class="hover:text-secondary" target="_blank" rel="noopener noreferrer" aria-label="Visita el perfil de Facebook de Rubén Tipiani">
-                    Rubén Tipiani
-                </a>
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2025 Travel Millpu - Todos los derechos reservados. | RUC: 20604628998</p>
+            <p class="mt-4 md:mt-0">
+                Diseñado con <i class="fas fa-heart text-primary mx-1" aria-hidden="true"></i> por 
+                <a href="https://www.facebook.com/rubenestebantipiania/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors font-medium">Rubén Tipiani</a>
             </p>
         </div>
     </div>
-</section>
+</footer>
