@@ -7,6 +7,7 @@ const tours = [
         description:
             "La travesía más completa por el nororiente peruano. Desde la exuberante selva de Tarapoto hasta las místicas alturas de Chachapoyas. Descubre Kuélap, Gocta, Laguna Azul y Ahuashiyacu en una sola expedición inolvidable.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20+%20CHACHAPOYAS%206D%2F5N*.",
+        itinerary: "/tours/tarapoto-chachapoyas"
     },
     {
         title: "TARAPOTO NATURAL",
@@ -15,6 +16,7 @@ const tours = [
         description:
             "Siente la energía de la Amazonía en su estado más puro. Visita la impresionante Catarata de Ahuashiyacu, navega por la mística Laguna Azul y déjate envolver por la biodiversidad y frescura de la selva de Tarapoto.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20NATURAL%203D%2F2N*.",
+        itinerary: "/tours/tarapoto-natural"
     },
 ];
 ---
@@ -62,9 +64,11 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href={tour.title === "TARAPOTO + CHACHAPOYAS" ? "/tours/tarapoto-chachapoyas" : tour.title === "TARAPOTO NATURAL" ? "/tours/tarapoto-natural" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
-                                    Ver Itinerario
-                                </a>
+                                {tour.itinerary && (
+                                    <a href={tour.itinerary} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                        Ver Itinerario
+                                    </a>
+                                )}
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
                                     Consultar Ahora
                                     <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />

@@ -7,6 +7,7 @@ const tours = [
         description:
             "La expedición definitiva de 5 días. Recorre Kuélap, Gocta, los Sarcófagos de Karajía, los Mausoleos de Revash y el Museo de Leymebamba. Un viaje sin igual por los rincones más sagrados del Reino de las Nubes.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20INOLVIDABLE%205D%2F4N*.",
+        itinerary: "/tours/chachapoyas-inolvidable"
     },
     {
         title: "CHACHAPOYAS MÁGICO",
@@ -15,6 +16,7 @@ const tours = [
         description:
             "La experiencia más completa de 4 días. Explora la majestuosidad de Kuélap, la impresionante Catarata de Gocta, los enigmáticos Sarcófagos de Karajía y la espectacular Ruta de los Cañones. Un viaje diseñado para sumergirte en la historia y la naturaleza virgen del Reino de las Nubes.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20MÁGICO%204D%2F3N*.",
+        itinerary: "/tours/chachapoyas-magico"
     },
     {
         title: "CHACHAPOYAS ESENCIAL",
@@ -23,6 +25,7 @@ const tours = [
         description:
             "El paquete definitivo para conocer lo mejor del norte. Un recorrido completo que combina la majestuosidad arqueológica de Kuélap, la imponente naturaleza de la catarata de Gocta y los impresionantes paisajes de los cañones. Diseñado para ofrecer una experiencia integral de aventura, historia y conexión profunda con la naturaleza amazónica.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20ESENCIAL%203D%2F2N*.",
+        itinerary: "/tours/chachapoyas-esencial"
     },
 ];
 ---
@@ -69,9 +72,11 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href={tour.title === "CHACHAPOYAS ESENCIAL" ? "/tours/chachapoyas-esencial" : tour.title === "CHACHAPOYAS MÁGICO" ? "/tours/chachapoyas-magico" : tour.title === "CHACHAPOYAS INOLVIDABLE" ? "/tours/chachapoyas-inolvidable" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
-                                    Ver Itinerario
-                                </a>
+                                {tour.itinerary && (
+                                    <a href={tour.itinerary} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                        Ver Itinerario
+                                    </a>
+                                )}
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
                                     Consultar Ahora
                                     <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />

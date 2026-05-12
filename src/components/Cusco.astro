@@ -1,6 +1,14 @@
 ---
 const tours = [
     {
+        title: "CHOQUEQUIRAO TREKKING",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/trekkingausangate.avif",
+        description: "Únete a la expedición hacia la 'Cuna de Oro'. 4 días de trekking intenso hacia Choquequirao, la ciudadela hermana de Machu Picchu.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20trekking%20*CHOQUEQUIRAO%204D%2F3N*.",
+        itinerary: "/tours/cusco-choquequirao-4d"
+    },
+    {
         title: "CAMINO DEL INCA",
         days: "2 DÍAS / 1 NOCHE",
         image: "/images/caminosdelinca.avif",
@@ -96,10 +104,17 @@ const tours = [
                             </p>
                         </div>
                         
-                        <button class="w-full mt-auto inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
-                            Consultar Ahora
-                            <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true"></i>
-                        </button>
+                        <div class="mt-auto flex flex-col gap-3">
+                            {tour.itinerary && (
+                                <a href={tour.itinerary} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                    Ver Itinerario
+                                </a>
+                            )}
+                            <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
+                                Consultar Ahora
+                                <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             ))}

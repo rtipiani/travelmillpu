@@ -1,0 +1,211 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarMillpu from "../../components/NavbarMillpu.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout 
+    title="Choquequirao Trekking 4D/3N | Travel Millpu" 
+    description="Únete a la expedición hacia la 'Cuna de Oro'. 4 días de trekking intenso hacia Choquequirao, la ciudadela hermana de Machu Picchu."
+>
+    <NavbarMillpu />
+
+    <!-- Hero Header -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+        <img 
+            src="/images/trekkingausangate.avif" 
+            alt="Choquequirao Trekking" 
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-24">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                Aventura de Alta Montaña
+            </span>
+            <h1 class="text-6xl md:text-8xl font-Yesteryear text-white mb-4 drop-shadow-md">
+                Choquequirao Trek
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light tracking-[0.3em] uppercase drop-shadow-sm">
+                4 Días / 3 Noches de Desafío Inca
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-8 space-y-20">
+                
+                <!-- Introduction -->
+                <section class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        El Último Refugio de los <span class="text-primary">Incas</span>.
+                    </h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-xl font-medium text-gray-800 leading-relaxed mb-4">
+                            Choquequirao, la "Cuna de Oro", es una de las ciudadelas incas más remotas y espectaculares de los Andes peruanos.
+                        </p>
+                        <p class="leading-relaxed">
+                            Este trekking de 4 días te llevará a través del profundo Cañón del Apurímac hasta las ruinas de Choquequirao. Es un desafío físico considerable recompensado por paisajes solitarios y la oportunidad de explorar una maravilla arqueológica sin las multitudes tradicionales.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Trek Details Grid -->
+                <section class="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-gray-100">
+                    <div class="text-center p-4">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Distancia</p>
+                        <p class="text-lg font-bold text-gray-900">42 km</p>
+                    </div>
+                    <div class="text-center p-4 border-l border-gray-100">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Altura Máx.</p>
+                        <p class="text-lg font-bold text-gray-900">3,037 msnm</p>
+                    </div>
+                    <div class="text-center p-4 border-l border-gray-100">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Dificultad</p>
+                        <p class="text-lg font-bold text-primary">Media-Alta</p>
+                    </div>
+                    <div class="text-center p-4 border-l border-gray-100">
+                        <p class="text-xs text-gray-500 uppercase font-bold mb-1">Desnivel</p>
+                        <p class="text-lg font-bold text-gray-900">~1,500 m</p>
+                    </div>
+                </section>
+
+                <!-- Itinerary -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-10">
+                        Itinerario de <span class="text-primary">Expedición</span>.
+                    </h2>
+                    
+                    <div class="space-y-12">
+                        <!-- Día 1 -->
+                        <div class="flex flex-col md:flex-row gap-8">
+                            <div class="md:w-32 shrink-0">
+                                <div class="text-4xl font-black text-gray-200">01</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Día</div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Cusco - Cachora - Marampata</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Iniciamos muy temprano (4:00 am) rumbo a Cachora. Desde Capuliyoc descenderemos al Cañón del Apurímac (uno de los más profundos del mundo). Tras almorzar en Chiquisca, cruzaremos el río y ascenderemos hasta Marampata, nuestro campamento base.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Día 2 -->
+                        <div class="flex flex-col md:flex-row gap-8 border-t border-gray-100 pt-12">
+                            <div class="md:w-32 shrink-0">
+                                <div class="text-4xl font-black text-gray-200">02</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Día</div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Marampata - Choquequirao - Marampata</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    ¡El día esperado! Visitaremos el complejo arqueológico de Choquequirao: Plaza principal, Templo Ceremonial, Sector Llamas y más. Tendremos 4 horas para explorar antes de retornar a Marampata para descansar.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Día 3 -->
+                        <div class="flex flex-col md:flex-row gap-8 border-t border-gray-100 pt-12">
+                            <div class="md:w-32 shrink-0">
+                                <div class="text-4xl font-black text-gray-200">03</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Día</div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Marampata - Chiquisca</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Iniciamos el retorno descendiendo nuevamente hacia el río Apurímac (Playa Rosalinas). Un trekking de aproximadamente 3 horas hasta llegar a Chiquisca, donde pasaremos nuestra última noche en la ruta.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Día 4 -->
+                        <div class="flex flex-col md:flex-row gap-8 border-t border-gray-100 pt-12">
+                            <div class="md:w-32 shrink-0">
+                                <div class="text-4xl font-black text-gray-200">04</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Día</div>
+                            </div>
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold text-gray-900">Chiquisca - Capuliyoc - Cusco</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Último esfuerzo para subir hasta Capuliyoc antes de que el calor sea intenso. Una movilidad nos esperará para trasladarnos a Cachora y finalmente retornar a la ciudad del Cusco.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Inclusions & Recommendations -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">El Tour Incluye</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-600 mt-1"></i> Transporte privado Cusco - Cachora ida y vuelta.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-600 mt-1"></i> Guía oficial de turismo (bilingüe).</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-600 mt-1"></i> Alimentación completa (Desayunos, Almuerzos, Cenas).</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-600 mt-1"></i> Hospedaje/Campamento y equipo de cocina.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-600 mt-1"></i> Caballos de carga para equipo y 5kg por pasajero.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6">¿Qué Llevar?</h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li class="flex items-start gap-3"><i class="fas fa-hiking text-primary mt-1"></i> Zapatos de trekking con buen agarre.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-sun text-primary mt-1"></i> Bloqueador, lentes de sol y gorra.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-mosquito text-primary mt-1"></i> Repelente para mosquitos (esencial).</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-mitten text-primary mt-1"></i> Ropa ligera para el día y abrigo para la noche.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-battery-full text-primary mt-1"></i> Baterías externas (carga por paneles solares).</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white rounded-3xl p-8 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100">
+                        <div class="mb-8">
+                            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Precio Especial</p>
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-xl font-medium text-gray-900">S/</span>
+                                <span class="text-5xl font-black text-gray-900 tracking-tight">900</span>
+                                <span class="text-lg font-bold text-gray-400">.00</span>
+                            </div>
+                            <p class="text-sm text-gray-500 mt-2">Por persona (Mínimo 2 pasajeros)</p>
+                            <p class="text-xs text-primary font-bold mt-1">Oferta Grupal (3+): S/ 850.00 x persona</p>
+                        </div>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center justify-between text-sm py-3 border-b border-gray-50">
+                                <span class="text-gray-500">Dificultad</span>
+                                <span class="font-bold text-gray-900">Media-Alta</span>
+                            </div>
+                            <div class="flex items-center justify-between text-sm py-3 border-b border-gray-50">
+                                <span class="text-gray-500">Salidas</span>
+                                <span class="font-bold text-gray-900">Diarias</span>
+                            </div>
+                        </div>
+
+                        <a 
+                            href="https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20trekking%20*CHOQUEQUIRAO%204D%2F3N*." 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white text-sm font-bold rounded-2xl hover:bg-red-700 transition-all shadow-lg hover:shadow-primary/30"
+                        >
+                            Reservar Ahora
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+    <Footer />
+</Layout>

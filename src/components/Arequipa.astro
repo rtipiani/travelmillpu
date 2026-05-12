@@ -1,36 +1,40 @@
 ---
 const tours = [
     {
-        title: "DESCUBRE AREQUIPA",
+        title: "DESCUBRE AREQUIPA 6D/5N",
+        days: "6 DÍAS / 5 NOCHES",
+        image: "/images/volcan.avif",
+        description:
+            "La expedición más completa. Disfruta de 6 días explorando el Cañón del Colca, la Laguna de Salinas, la Ruta del Sillar y tiempo libre para vivir la Ciudad Blanca a tu ritmo. Incluye 5 noches de hotel y desayunos.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%206D%2F5N*.",
+        itinerary: "/tours/arequipa-descubre-6d"
+    },
+    {
+        title: "DESCUBRE AREQUIPA 5D/4N",
+        days: "5 DÍAS / 4 NOCHES",
+        image: "/images/colca.avif",
+        description:
+            "Aventura y cultura en 5 días. Conoce la Catarata de Pillones, el Cañón del Colca, la Reserva Nacional de Salinas y Aguada Blanca, y lo mejor del centro histórico de Arequipa.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%205D%2F4N*.",
+        itinerary: "/tours/arequipa-descubre-5d"
+    },
+    {
+        title: "DESCUBRE AREQUIPA 4D/3N",
         days: "4 DÍAS / 3 NOCHES",
         image: "/images/sillar.avif",
         description:
             "La experiencia completa en la Ciudad Blanca. Disfruta de un city tour por la campiña o la ruta del sillar, explora la inmensidad del Cañón del Colca y maravíllate con la Reserva Nacional Salinas y Aguada Blanca. Incluye alojamiento y desayunos.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%204D%2F3N*.",
+        itinerary: "/tours/arequipa-descubre"
     },
     {
-        title: "TOUR CAÑON DEL COLCA",
-        days: "FULL DAY",
-        image: "/images/colca.avif",
-        description:
-            "Embárcate en una aventura única hacia el Cañón del Colca, uno de los cañones más profundos del mundo. Disfruta de impresionantes paisajes montañosos, el avistamiento de cóndores y la inmersión en la cultura local de los pueblos andinos que habitan esta región. Ideal para los amantes de la naturaleza, la historia y la aventura, el tour te permitirá explorar este asombroso destino de una manera inolvidable.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20CAÑON%20DEL%20COLCA*.",
-    },
-    {
-        title: "CAÑON DEL COLCA + CHIVAY",
-        days: "2 DÍAS / 1 NOCHE",
+        title: "DESCUBRE AREQUIPA 3D/2N",
+        days: "3 DÍAS / 2 NOCHES",
         image: "/images/chivay.avif",
         description:
-            "Disfruta de una experiencia inolvidable combinando el impresionante Cañón del Colca con la pintoresca localidad de Chivay. Vive la emoción de explorar uno de los cañones más profundos del mundo, mientras observas a los majestuosos cóndores en su vuelo. Luego, relájate en las aguas termales de Chivay y conoce la riqueza cultural de esta región andina. Un destino ideal para los viajeros que buscan belleza natural, aventura y tradición en un solo viaje.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CAÑON%20DEL%20COLCA%20%2B%20CHIVAY%202%20DÍAS%20%2F%201%20NOCHE*.",
-    },
-    {
-        title: "RUTA DEL SILLAR",
-        days: "MEDIO DÍA",
-        image: "/images/sillar.avif",
-        description:
-            "Descubre la fascinante Ruta del Sillar, un recorrido por las canteras de donde se extrae la piedra volcánica blanca que da nombre a la 'Ciudad Blanca' de Arequipa. Admira las impresionantes esculturas talladas en sillar, conoce el proceso de extracción tradicional y maravíllate con los espectaculares cañones formados por esta piedra. Una experiencia cultural y paisajística única y obligatoria en Arequipa.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20tour%20*RUTA%20DEL%20SILLAR*.",
+            "Lo esencial de Arequipa en 3 días. Incluye una visita al Cañón del Colca, la Ruta del Sillar o la campiña arequipeña, y tiempo libre para disfrutar de la ciudad. Una escapada perfecta.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%203D%2F2N*.",
+        itinerary: "/tours/arequipa-descubre-3d"
     },
 ];
 ---
@@ -78,9 +82,11 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href={tour.title === "DESCUBRE AREQUIPA" ? "/tours/arequipa-descubre" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
-                                    Ver Itinerario
-                                </a>
+                                {tour.itinerary && (
+                                    <a href={tour.itinerary} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                        Ver Itinerario
+                                    </a>
+                                )}
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
                                     Consultar Ahora
                                     <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />

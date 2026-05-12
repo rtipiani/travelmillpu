@@ -1,0 +1,231 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarMillpu from "../../components/NavbarMillpu.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout 
+    title="Descubre Arequipa 6D/5N | Travel Millpu" 
+    description="La expedición definitiva en Arequipa. 6 días recorriendo el Cañón del Colca, Salinas y Aguada Blanca, la Ruta del Sillar y disfrutando de la Ciudad Blanca."
+>
+    <NavbarMillpu />
+
+    <!-- Hero Header -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+        <img 
+            src="/images/volcan.avif" 
+            alt="Descubre Arequipa 6D/5N" 
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-24">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                Gran Expedición Volcánica
+            </span>
+            <h1 class="text-6xl md:text-8xl font-Yesteryear text-white mb-4 drop-shadow-md">
+                Descubre Arequipa
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light tracking-[0.3em] uppercase drop-shadow-sm">
+                6 Días / 5 Noches de Inmersión Total
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-8 space-y-20">
+                
+                <!-- Introduction -->
+                <section class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        El Viaje Más Completo por la <span class="text-primary">Ciudad Blanca</span>.
+                    </h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-xl font-medium text-gray-800 leading-relaxed mb-4">
+                            Descubre Arequipa en su máxima expresión con este programa de 6 días diseñado para quienes desean explorar cada rincón con calma y profundidad.
+                        </p>
+                        <p class="leading-relaxed">
+                            Este itinerario te lleva desde las canteras de sillar y la campiña arequipeña hasta las profundidades del Cañón del Colca y los paisajes lunares de la Reserva Nacional Salinas. Con días libres estratégicamente ubicados para que disfrutes de la gastronomía y la ciudad a tu propio ritmo.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Itinerary Timeline -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-10">
+                        Itinerario <span class="text-primary">Detallado</span>.
+                    </h2>
+                    
+                    <div class="flex flex-col gap-10">
+                        
+                        <!-- Día 1 -->
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D1
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">City Tour Campiña o Ruta del Sillar</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/sillar.avif" alt="City Tour" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div class="space-y-4 text-sm text-gray-600">
+                                    <p><strong>Opción Campiña:</strong> Mirador de Yanahuara, Carmen Alto, Incalpaca, Mansión del Fundador y Molino de Sabandía.</p>
+                                    <p><strong>Opción Sillar:</strong> Canteras de Añashuayco (demostración de tallado) y Quebrada de Culebrillas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Día 2 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D2
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Día Libre</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center border border-gray-100 italic text-gray-500 text-center">
+                                    Tiempo para explorar la ciudad, visitar el Monasterio de Santa Catalina o disfrutar de la gastronomía local.
+                                </div>
+                                <p class="text-sm text-gray-600 self-center">
+                                    Día libre para que los pasajeros puedan disfrutar a su ritmo. Se recomienda realizar compras o explorar por cuenta propia los alrededores.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Día 3 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D3
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Cañón del Colca Full Day</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/colca.avif" alt="Colca" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-3 text-sm text-gray-600 self-center">
+                                    <li>Cruz del Cóndor: Observación del vuelo del cóndor y profundidad del cañón.</li>
+                                    <li>Visita a pueblos: Chivay, Maca y Yanque con sus iglesias coloniales.</li>
+                                    <li>Relajo en baños termales y almuerzo en Chivay.</li>
+                                    <li>Reserva Nacional: Vicuñas, llamas y alpacas en su estado natural.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 4 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D4
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Salinas y Aguada Blanca</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/volcan.avif" alt="Salinas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-3 text-sm text-gray-600 self-center">
+                                    <li>Mirador de volcanes en Chiguata (Misti, Chachani, Pichu Pichu).</li>
+                                    <li>Salar y Laguna de Salinas: Avistamiento de flamencos y aves andinas.</li>
+                                    <li>Caminata por el salar y visita al mini volcán de Lojen.</li>
+                                    <li>Tiempo para fotografías en paisajes de ensueño.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 5 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D5
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Día Libre</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="bg-gray-50 rounded-2xl p-8 flex items-center justify-center border border-gray-100 italic text-gray-500 text-center">
+                                    Último día para compras de artesanías o visitas adicionales opcionales.
+                                </div>
+                                <p class="text-sm text-gray-600 self-center">
+                                    Día libre para que los pasajeros puedan disfrutar a su ritmo antes de finalizar su aventura en la Ciudad Blanca.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Inclusions & Exclusions -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-check text-emerald-600"></i>
+                            El Tour Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Reunión informativa previa a la salida.</li>
+                            <li>Transporte turístico compartido con A/C.</li>
+                            <li>Guía oficial de turismo en todos los tours.</li>
+                            <li>5 noches de alojamiento en Arequipa.</li>
+                            <li>Desayunos incluidos cada mañana.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50/50 rounded-2xl p-8 border border-red-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            No Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Tickets de ingreso a atractivos turísticos.</li>
+                            <li>Almuerzos y cenas no especificados.</li>
+                            <li>Gastos personales y propinas.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-200">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-4">Precio del Paquete</p>
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="text-2xl font-medium text-gray-900">S/</span>
+                            <span class="text-5xl font-black text-gray-900 tracking-tighter">556</span>
+                            <span class="text-xl font-bold text-gray-400">.00</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="text-sm font-medium text-gray-500">Por persona / Mínimo 2 pax</span>
+                        </div>
+                        <div class="space-y-4 border-t border-gray-100 pt-6 mb-8">
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span class="flex items-center gap-2"><i class="far fa-clock w-4 text-center"></i> Duración</span>
+                                <span class="font-bold text-gray-900">6 Días / 5 Noches</span>
+                            </div>
+                        </div>
+                        <a 
+                            href="https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%206D%2F5N*." 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-xl"
+                        >
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+    <Footer />
+</Layout>
