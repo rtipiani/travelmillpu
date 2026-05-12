@@ -3,5 +3,5 @@
 @font-face {
     font-family: 'Yesteryear';
     src: url('/fonts/Yesteryear-Regular.ttf') format('truetype');
-    font-display: swap;
+    font-display: block;
 }
