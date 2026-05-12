@@ -1,0 +1,263 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarMillpu from "../../components/NavbarMillpu.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout 
+    title="Tarapoto + Chachapoyas 6D/5N | Travel Millpu" 
+    description="La gran expedición del nororiente. 6 días recorriendo Tarapoto y Chachapoyas: Kuélap, Gocta, Laguna Azul, Ahuashiyacu y más."
+>
+    <NavbarMillpu />
+
+    <!-- Hero Header -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+        <img 
+            src="/images/chachapoyas_magico.png" 
+            alt="Tarapoto + Chachapoyas" 
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-24">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                Gran Expedición Nororiental
+            </span>
+            <h1 class="text-6xl md:text-8xl font-Yesteryear text-white mb-4 drop-shadow-md">
+                Tarapoto + Chachapoyas
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light tracking-[0.3em] uppercase drop-shadow-sm">
+                6 Días entre Selva y Montañas
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-8 space-y-20">
+                
+                <!-- Introduction -->
+                <section class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        El Viaje Definitivo por el <span class="text-primary">Norte del Perú</span>.
+                    </h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-xl font-medium text-gray-800 leading-relaxed mb-4">
+                            Esta expedición de 6 días es la combinación perfecta para quienes buscan la exuberancia de la selva amazónica y el misterio de las civilizaciones andinas.
+                        </p>
+                        <p class="leading-relaxed">
+                            Iniciamos en Tarapoto, la ciudad de las palmeras, para luego adentrarnos en el corazón de la cultura Chachapoyas. Un recorrido que incluye desde cataratas y baños termales hasta fortalezas milenarias y comunidades nativas. Todo planificado para que vivas la experiencia más auténtica del nororiente peruano.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Itinerary Timeline -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-10">
+                        Itinerario <span class="text-primary">Detallado</span>.
+                    </h2>
+                    
+                    <div class="flex flex-col gap-10">
+                        
+                        <!-- Día 1 -->
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D1
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Alto Mayo (Moyobamba y Rioja)</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/tarapoto_natural.png" alt="Alto Mayo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Recojo del hotel y salida hacia el Alto Mayo.</li>
+                                    <li>Visita a la naciente del río Tioyacu y baños termales de San Mateo.</li>
+                                    <li>Ingreso al Orquideario de Moyobamba y degustación de café/licores.</li>
+                                    <li>Almuerzo a la carta e inicio del traslado a Chachapoyas.</li>
+                                    <li class="font-bold text-primary italic">Noche en Chachapoyas.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 2 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D2
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Fortaleza Kuélap y Teleférico</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/kuelap.avif" alt="Kuélap" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Traslado en telecabinas Kuélap (vistas panorámicas).</li>
+                                    <li>Visita guiada a la enigmática fortaleza de piedra.</li>
+                                    <li>Almuerzo en restaurante campestre seleccionado.</li>
+                                    <li class="font-bold text-primary italic">Noche en Chachapoyas.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 3 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D3
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Sarcófagos de Karajía y Cavernas de Quiocta</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/karajia.png" alt="Karajía" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Visita a los milenarios sarcófagos en los acantilados.</li>
+                                    <li>Exploración guiada de la Caverna de Quiocta.</li>
+                                    <li>Almuerzo en la localidad de Lamud.</li>
+                                    <li class="font-bold text-primary italic">Noche en Chachapoyas.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 4 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D4
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Catarata de Gocta</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/gocta.avif" alt="Gocta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Caminata guiada hacia una de las cataratas más altas del mundo.</li>
+                                    <li>Almuerzo regional en Cocachimba.</li>
+                                    <li>Traslado de retorno a la ciudad de Tarapoto.</li>
+                                    <li class="font-bold text-primary italic">Llegada y noche en Tarapoto.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 5 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D5
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Laguna Azul (Sauce)</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/slide3.avif" alt="Laguna Azul" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Cruce del río Huallaga en balsa cautiva.</li>
+                                    <li>Paseo en bote por la mística Laguna Azul.</li>
+                                    <li>Visita al Mirador Punta de Gallinazo.</li>
+                                    <li>Almuerzo regional y tiempo de relax.</li>
+                                    <li class="font-bold text-primary italic">Noche en Tarapoto.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 6 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D6
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Ahuashiyacu + Lamas Nativa</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/tarapoto_natural.png" alt="Tarapoto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li class="font-bold">Mañana: Cataratas de Ahuashiyacu</li>
+                                    <li>Caminata corta por la selva y baño en la catarata.</li>
+                                    <li class="font-bold">Tarde: Lamas Nativa y Castillo</li>
+                                    <li>Visita al famoso Castillo de Lamas y el barrio nativo Wayku.</li>
+                                    <li>Fin del programa y traslado al aeropuerto/hotel.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Inclusions & Exclusions -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-check text-emerald-600"></i>
+                            El Tour Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>3 noches en Chachapoyas + 2 noches en Tarapoto.</li>
+                            <li>6 desayunos variados y 5 almuerzos regionales.</li>
+                            <li>Todos los traslados y tours mencionados.</li>
+                            <li>Entradas a todos los sitios turísticos y Telecabinas.</li>
+                            <li>Guía oficial de turismo y atención personalizada.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50/50 rounded-2xl p-8 border border-red-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            No Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Pasajes aéreos.</li>
+                            <li>Cenas no mencionadas.</li>
+                            <li>Propinas y gastos personales.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-200">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-4">Precio del Paquete</p>
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="text-2xl font-medium text-gray-900">S/</span>
+                            <span class="text-5xl font-black text-gray-900 tracking-tighter">1,299</span>
+                            <span class="text-xl font-bold text-gray-400">.00</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="text-sm font-medium text-gray-500">Por persona / Mínimo 2 pax</span>
+                        </div>
+                        <div class="space-y-4 border-t border-gray-100 pt-6 mb-8">
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span class="flex items-center gap-2"><i class="far fa-clock w-4 text-center"></i> Duración</span>
+                                <span class="font-bold text-gray-900">6 Días / 5 Noches</span>
+                            </div>
+                        </div>
+                        <a 
+                            href="https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20+%20CHACHAPOYAS%206D%2F5N*." 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-xl"
+                        >
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+    <Footer />
+</Layout>

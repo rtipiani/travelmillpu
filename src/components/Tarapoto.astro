@@ -62,7 +62,7 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href="#" class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                <a href={tour.title === "TARAPOTO + CHACHAPOYAS" ? "/tours/tarapoto-chachapoyas" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
                                     Ver Itinerario
                                 </a>
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
