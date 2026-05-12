@@ -1,0 +1,79 @@
+---
+const tours = [
+    {
+        title: "TARAPOTO + CHACHAPOYAS",
+        days: "6 DÍAS / 5 NOCHES",
+        image: "/images/chachapoyas_magico.png",
+        description:
+            "La travesía más completa por el nororiente peruano. Desde la exuberante selva de Tarapoto hasta las místicas alturas de Chachapoyas. Descubre Kuélap, Gocta, Laguna Azul y Ahuashiyacu en una sola expedición inolvidable.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20+%20CHACHAPOYAS%206D%2F5N*.",
+    },
+    {
+        title: "TARAPOTO NATURAL",
+        days: "3 DÍAS / 2 NOCHES",
+        image: "/images/tarapoto_natural.png",
+        description:
+            "Siente la energía de la Amazonía en su estado más puro. Visita la impresionante Catarata de Ahuashiyacu, navega por la mística Laguna Azul y déjate envolver por la biodiversidad y frescura de la selva de Tarapoto.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20NATURAL%203D%2F2N*.",
+    },
+];
+---
+
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center">
+            <h2
+                class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4"
+            >
+                Explora la selva de <span class="text-primary">Tarapoto</span>.
+            </h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                Cascadas cristalinas, lagunas místicas y la aventura más vibrante de la Amazonía peruana.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Centering logic: we use the same grid as other components but only fill 2 slots */}
+            {
+                tours.map((tour) => (
+                    <div class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 h-full"
+                    >
+                        <div class="relative w-full h-[400px] overflow-hidden bg-gray-200 shrink-0">
+                            <img
+                                class="w-full h-full object-cover"
+                                src={tour.image}
+                                alt={tour.title}
+                                loading="lazy"
+                                decoding="async"
+                            />
+                            <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-black text-primary shadow-sm tracking-wide">
+                                {tour.days}
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col justify-between p-6 h-full">
+                            <div class="text-left mb-6">
+                                <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                                    {tour.title}
+                                </h3>
+                                <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                    {tour.description}
+                                </p>
+                            </div>
+
+                            <div class="mt-auto flex flex-col gap-3">
+                                <a href="#" class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                    Ver Itinerario
+                                </a>
+                                <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
+                                    Consultar Ahora
+                                    <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+</section>
