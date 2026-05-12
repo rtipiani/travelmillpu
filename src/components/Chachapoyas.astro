@@ -1,36 +1,28 @@
 ---
 const tours = [
     {
+        title: "CHACHAPOYAS INOLVIDABLE",
+        days: "5 DÍAS / 4 NOCHES",
+        image: "/images/gocta.avif",
+        description:
+            "La expedición definitiva de 5 días. Recorre Kuélap, Gocta, los Sarcófagos de Karajía, los Mausoleos de Revash y el Museo de Leymebamba. Un viaje sin igual por los rincones más sagrados del Reino de las Nubes.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20INOLVIDABLE%205D%2F4N*.",
+    },
+    {
+        title: "CHACHAPOYAS MÁGICO",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/chachapoyas_magico.png",
+        description:
+            "La experiencia más completa de 4 días. Explora la majestuosidad de Kuélap, la impresionante Catarata de Gocta, los enigmáticos Sarcófagos de Karajía y la espectacular Ruta de los Cañones. Un viaje diseñado para sumergirte en la historia y la naturaleza virgen del Reino de las Nubes.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20MÁGICO%204D%2F3N*.",
+    },
+    {
         title: "CHACHAPOYAS ESENCIAL",
         days: "3 DÍAS / 2 NOCHES",
         image: "/images/chachapoyas_esencial.avif",
         description:
             "El paquete definitivo para conocer lo mejor del norte. Un recorrido completo que combina la majestuosidad arqueológica de Kuélap, la imponente naturaleza de la catarata de Gocta y los impresionantes paisajes de los cañones. Diseñado para ofrecer una experiencia integral de aventura, historia y conexión profunda con la naturaleza amazónica.",
         link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CHACHAPOYAS%20ESENCIAL%203D%2F2N*.",
-    },
-    {
-        title: "TOUR FORTALEZA KUÉLAP Y TELEFÉRICO",
-        days: "FULL DAY",
-        image: "/images/kuelap.avif",
-        description:
-            "Descubre el 'Machu Picchu del Norte', la enigmática fortaleza de piedra construida por la cultura Chachapoyas en lo alto de los Andes amazónicos. Disfruta del emocionante viaje en el primer teleférico del Perú, cruzando profundos valles con vistas panorámicas inigualables hasta llegar a este mágico complejo arqueológico.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20FORTALEZA%20KUÉLAP%20Y%20TELEFÉRICO*.",
-    },
-    {
-        title: "TOUR CATARATA DE GOCTA",
-        days: "FULL DAY",
-        image: "/images/gocta.avif",
-        description:
-            "Embárcate en una caminata por el exuberante bosque de neblina hasta llegar a una de las cataratas más altas y hermosas del mundo. Siente la brisa y la energía del agua cayendo desde más de 700 metros de altura, mientras observas la flora y fauna endémica, como el icónico Gallito de las Rocas.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20full%20day%20*TOUR%20CATARATA%20DE%20GOCTA*.",
-    },
-    {
-        title: "TOUR A LA RUTA DE LOS CAÑONES",
-        days: "MEDIO DÍA",
-        image: "/images/canones.avif",
-        description:
-            "Experimenta la inmensidad de los paisajes de la región Amazonas visitando el espectacular Cañón del Sonche. Asómate a sus miradores y maravíllate con la profundidad y belleza escarpada de las montañas. Una excursión perfecta para los amantes de la fotografía y las vistas panorámicas dramáticas.",
-        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20tour%20*RUTA%20DE%20LOS%20CAÑONES*.",
     },
 ];
 ---
@@ -77,7 +69,7 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href={tour.title === "CHACHAPOYAS ESENCIAL" ? "/tours/chachapoyas-esencial" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                <a href={tour.title === "CHACHAPOYAS ESENCIAL" ? "/tours/chachapoyas-esencial" : tour.title === "CHACHAPOYAS MÁGICO" ? "/tours/chachapoyas-magico" : tour.title === "CHACHAPOYAS INOLVIDABLE" ? "/tours/chachapoyas-inolvidable" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
                                     Ver Itinerario
                                 </a>
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
