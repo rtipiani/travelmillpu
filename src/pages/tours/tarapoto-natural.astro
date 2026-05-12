@@ -1,0 +1,200 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarMillpu from "../../components/NavbarMillpu.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout 
+    title="Tarapoto Natural 3D/2N | Travel Millpu" 
+    description="Descubre la magia de la selva en 3 días. Visita el Castillo de Lamas, la Laguna Azul y la Catarata de Ahuashiyacu con Travel Millpu."
+>
+    <NavbarMillpu />
+
+    <!-- Hero Header -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+        <img 
+            src="/images/tarapoto_natural.png" 
+            alt="Tarapoto Natural" 
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-24">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                Escapada Amazónica
+            </span>
+            <h1 class="text-6xl md:text-8xl font-Yesteryear text-white mb-4 drop-shadow-md">
+                Tarapoto Natural
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light tracking-[0.3em] uppercase drop-shadow-sm">
+                3 Días de Pura Selva
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-8 space-y-20">
+                
+                <!-- Introduction -->
+                <section class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        Vive la esencia de la <span class="text-primary">Amazonía</span>.
+                    </h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-xl font-medium text-gray-800 leading-relaxed mb-4">
+                            Tarapoto Natural es la opción perfecta para una desconexión rápida y llena de vida en la selva peruana.
+                        </p>
+                        <p class="leading-relaxed">
+                            Aprovecha 3 días intensos recorriendo los puntos más emblemáticos de San Martín. Desde el misticismo del Castillo de Lamas y la cultura viva de su gente, hasta la serenidad de la Laguna Azul y la frescura de las aguas de Ahuashiyacu. Un viaje corto pero cargado de paisajes inolvidables.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Itinerary Timeline -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-10">
+                        Itinerario <span class="text-primary">Detallado</span>.
+                    </h2>
+                    
+                    <div class="flex flex-col gap-10">
+                        
+                        <!-- Día 1 -->
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D1
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Lamas Nativa y Castillo</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/tarapoto_natural.png" alt="Lamas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Traslado gratuito desde el aeropuerto o terminal terrestre.</li>
+                                    <li>Visita al famoso Castillo de Lamas (construcción de estilo europeo en la selva).</li>
+                                    <li>Recorrido por la Plaza de Armas y Mirador natural de Lamas.</li>
+                                    <li>Visita a la Comunidad Nativa del barrio Wayku (cultura viva).</li>
+                                    <li class="font-bold text-primary italic">Media tarde.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 2 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D2
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Laguna Azul (Sauce)</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/slide3.avif" alt="Laguna Azul" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Salida hacia el pueblo de Sauce y cruce del río Huallaga.</li>
+                                    <li>Visita al Mirador Punta de Gallinazo.</li>
+                                    <li>Paseo en bote a motor por la mística Laguna Azul.</li>
+                                    <li>Almuerzo regional a la carta incluido.</li>
+                                    <li class="font-bold text-primary italic">Full Day (Salida 08:30 AM).</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Día 3 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D3
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Cataratas de Ahuashiyacu</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/tarapoto_natural.png" alt="Ahuashiyacu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <ul class="space-y-4 text-gray-600 self-center text-sm">
+                                    <li>Traslado al área protegida de la Cordillera Escalera.</li>
+                                    <li>Breve caminata de 10 minutos por senderos naturales.</li>
+                                    <li>Tiempo para baño y fotografías en la catarata de 40 metros.</li>
+                                    <li>Traslado de retorno al hotel o aeropuerto.</li>
+                                    <li class="font-bold text-primary italic">Media mañana.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Inclusions & Exclusions -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-check text-emerald-600"></i>
+                            El Tour Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Traslados Aeropuerto - Hotel - Aeropuerto.</li>
+                            <li>2 noches de alojamiento en hotel recomendado.</li>
+                            <li>2 desayunos variados y 1 almuerzo a la carta.</li>
+                            <li>Entradas a todos los sitios turísticos mencionados.</li>
+                            <li>Transporte con aire acondicionado y guía local.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50/50 rounded-2xl p-8 border border-red-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            No Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Derecho municipal en Laguna (S/ 5.00 aprox).</li>
+                            <li>Deportes acuáticos u opcionales.</li>
+                            <li>Propinas y gastos personales.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-200">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-4">Precio del Paquete</p>
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="text-2xl font-medium text-gray-900">S/</span>
+                            <span class="text-5xl font-black text-gray-900 tracking-tighter">325</span>
+                            <span class="text-xl font-bold text-gray-400">.00</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="text-sm font-medium text-gray-500">Por persona / Mínimo 2 pax</span>
+                        </div>
+                        <div class="space-y-4 border-t border-gray-100 pt-6 mb-8">
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span class="flex items-center gap-2"><i class="far fa-clock w-4 text-center"></i> Duración</span>
+                                <span class="font-bold text-gray-900">3 Días / 2 Noches</span>
+                            </div>
+                        </div>
+                        <a 
+                            href="https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*TARAPOTO%20NATURAL%203D%2F2N*." 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-xl"
+                        >
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+    <Footer />
+</Layout>
