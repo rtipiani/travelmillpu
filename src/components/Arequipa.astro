@@ -1,6 +1,14 @@
 ---
 const tours = [
     {
+        title: "DESCUBRE AREQUIPA",
+        days: "4 DÍAS / 3 NOCHES",
+        image: "/images/sillar.avif",
+        description:
+            "La experiencia completa en la Ciudad Blanca. Disfruta de un city tour por la campiña o la ruta del sillar, explora la inmensidad del Cañón del Colca y maravíllate con la Reserva Nacional Salinas y Aguada Blanca. Incluye alojamiento y desayunos.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*DESCUBRE%20AREQUIPA%204D%2F3N*.",
+    },
+    {
         title: "TOUR CAÑON DEL COLCA",
         days: "FULL DAY",
         image: "/images/colca.avif",
@@ -70,7 +78,7 @@ const tours = [
                             </div>
 
                             <div class="mt-auto flex flex-col gap-3">
-                                <a href="#" class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                <a href={tour.title === "DESCUBRE AREQUIPA" ? "/tours/arequipa-descubre" : "#"} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
                                     Ver Itinerario
                                 </a>
                                 <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
