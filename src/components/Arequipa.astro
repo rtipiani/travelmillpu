@@ -1,5 +1,14 @@
 ---
-const tours = [
+interface Tour {
+    title: string;
+    days: string;
+    image: string;
+    description: string;
+    link: string;
+    itinerary?: string;
+}
+
+const tours: Tour[] = [
     {
         title: "DESCUBRE AREQUIPA 6D/5N",
         days: "6 DÍAS / 5 NOCHES",

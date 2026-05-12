@@ -1,5 +1,14 @@
 ---
-const tours = [
+interface Tour {
+    title: string;
+    days: string;
+    image: string;
+    description: string;
+    link: string;
+    itinerary?: string;
+}
+
+const tours: Tour[] = [
     {
         title: "YAKUPARK + PLAYA LA MINA",
         days: "FULL DAY",
