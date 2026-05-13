@@ -28,11 +28,11 @@ const slides = [
         {slides.map((slide) => (
             <div class="relative flex-shrink-0 w-full h-full">
                 <img src={slide.src} alt={slide.alt} class="w-full h-full object-cover" decoding="async" />
-                <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-16 md:px-32">
-                    <h2 class="text-5xl sm:text-6xl lg:text-7xl font-Yesteryear text-white [text-shadow:_0_4px_10px_rgb(0_0_0_/_100%)] mb-4 py-2">
+                <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6 sm:px-16 xl:px-32">
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-Yesteryear text-white [text-shadow:_0_4px_10px_rgb(0_0_0_/_100%)] mb-4 py-2">
                         <span class="inline-block pr-4">{slide.title}</span>
                     </h2>
-                    <p class="text-lg sm:text-xl md:text-2xl text-white font-light drop-shadow-lg mb-8 max-w-2xl mx-auto">
+                    <p class="text-base sm:text-lg lg:text-xl xl:text-2xl text-white font-light drop-shadow-lg mb-8 max-w-2xl mx-auto">
                         {slide.description}
                     </p>
                     <a href={slide.whatsappLink} class="bg-primary text-white px-8 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform" target="_blank" rel="noopener noreferrer">

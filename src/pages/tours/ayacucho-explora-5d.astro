@@ -1,0 +1,257 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarMillpu from "../../components/NavbarMillpu.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout 
+    title="Explora Ayacucho 5D/4N | Travel Millpu" 
+    description="Descubre la esencia de Ayacucho en 5 días. Incluye City Tour, Wari, Quinua, Vilcashuamán y las impresionantes Aguas Turquesas de Millpu."
+>
+    <NavbarMillpu />
+
+    <!-- Hero Header -->
+    <header class="relative w-full h-[60vh] min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+        <img 
+            src="/images/wari.avif" 
+            alt="Explora Ayacucho 5D/4N" 
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-24">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-white/20 backdrop-blur-md border border-white/40 text-white text-xs font-bold tracking-[0.2em] uppercase mb-6">
+                Cultura y Naturaleza
+            </span>
+            <h1 class="text-6xl md:text-8xl font-Yesteryear text-white mb-4 drop-shadow-md">
+                Explora Ayacucho
+            </h1>
+            <p class="text-lg md:text-2xl text-white/90 font-light tracking-[0.3em] uppercase drop-shadow-sm">
+                5 Días / 4 Noches de Tradición Viva
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="bg-white">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+            
+            <div class="lg:col-span-8 space-y-20">
+                
+                <!-- Introduction -->
+                <section class="max-w-3xl">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        La Ciudad de las <span class="text-primary">33 Iglesias</span> te espera.
+                    </h2>
+                    <div class="prose prose-lg text-gray-600">
+                        <p class="text-xl font-medium text-gray-800 leading-relaxed mb-4">
+                            Un viaje inolvidable por la historia, el arte y los paisajes celestiales de Ayacucho.
+                        </p>
+                        <p class="leading-relaxed">
+                            Desde el misticismo de sus templos coloniales y la grandeza del Imperio Wari, hasta la maravilla natural de las Aguas Turquesas de Millpu. Este paquete está diseñado para quienes desean una experiencia completa, combinando arqueología, artesanía y naturaleza en el corazón de los Andes.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Itinerary Timeline -->
+                <section>
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight mb-10">
+                        Itinerario <span class="text-primary">Día a Día</span>.
+                    </h2>
+                    
+                    <div class="flex flex-col gap-10">
+                        
+                        <!-- Día 1 -->
+                        <div class="group">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D1
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">City Tour Ayacucho</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/pampa.avif" alt="City Tour Ayacucho" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div class="space-y-4 text-sm text-gray-600">
+                                    <p class="font-bold text-primary">Inicio 03:30 pm.</p>
+                                    <ul class="space-y-2">
+                                        <li>Visita al Museo del retablo.</li>
+                                        <li>Recorrido por Casonas coloniales.</li>
+                                        <li>Vistas desde el Mirador de Acuchimay.</li>
+                                        <li>Monasterio de Santa Teresa.</li>
+                                        <li>Taller de textileria y Taller del alabastro andino.</li>
+                                        <li>Santa Ana (Templos importantes).</li>
+                                    </ul>
+                                    <p class="text-xs italic">Fin del tour 7:30 pm. y retorno al hospedaje El Retablo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Día 2 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D2
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Tour Wari - Quinua</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/wari.avif" alt="Wari Quinua" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div class="space-y-4 text-sm text-gray-600">
+                                    <p class="font-bold text-primary">Inicio 09:30 am.</p>
+                                    <ul class="space-y-2">
+                                        <li>Visita al Complejo Arqueológico de Wari: Museo de sitio, Templo ceremonial, Mausoleo real.</li>
+                                        <li>Pueblo de artesanos Quinua (Talleres artesanales).</li>
+                                        <li>Santuario Histórico de la Pampa de Ayacucho.</li>
+                                        <li>Museo de las abejas (opcional).</li>
+                                    </ul>
+                                    <p class="text-xs italic">Fin del tour 4:00 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Día 3 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D3
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Vilcashuamán</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/vilcashuaman.avif" alt="Vilcashuaman" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div class="space-y-4 text-sm text-gray-600">
+                                    <p class="font-bold text-primary">Inicio 08:00 am.</p>
+                                    <ul class="space-y-2">
+                                        <li>Visita a las Puyas de Raymondi.</li>
+                                        <li>Intiwatana y Laguna de Pomaccocha.</li>
+                                        <li>El Torreón y Casa de las escogidas.</li>
+                                        <li>Ciudad inca de Vilcashuaman: Portada del Sol, Ushmo piramidal, Templo del sol y la luna, Kallancas.</li>
+                                    </ul>
+                                    <p class="text-xs italic">Fin del tour 7:30 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Día 4 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D4
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Aguas Turquesas Millpu</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="rounded-2xl overflow-hidden shadow-sm h-64 border border-gray-100">
+                                    <img src="/images/millpu.avif" alt="Millpu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                                </div>
+                                <div class="space-y-4 text-sm text-gray-600">
+                                    <p class="font-bold text-primary">Inicio 08:00 am.</p>
+                                    <p>Disfrutaremos de las piscinas naturales de Millpu, famosas por su color turquesa y formaciones escalonadas a lo largo del cañón.</p>
+                                    <ul class="space-y-2">
+                                        <li>Caminata de 30 min aprox.</li>
+                                        <li>Visita al mirador Millpu y Cascada de Millpu.</li>
+                                        <li>Ojo del agua.</li>
+                                        <li>Degustación de lácteos y papitas nativas.</li>
+                                    </ul>
+                                    <p class="text-xs italic">Fin del tour 7:30 pm.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Día 5 -->
+                        <div class="group border-t border-gray-100 pt-10">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="w-12 h-12 rounded-full bg-gray-900 text-white flex items-center justify-center font-bold text-lg shrink-0">
+                                    D5
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-900">Día Libre</h3>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-8 ml-4 md:ml-16">
+                                <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 italic text-gray-500 text-center">
+                                    Tarde libre para realizar las últimas compras de artesanías o pasear por la ciudad a tu ritmo.
+                                </div>
+                                <p class="text-sm text-gray-600 self-center">
+                                    A la hora coordinada, traslado para el retorno a la ciudad de origen.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Inclusions & Exclusions -->
+                <section class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-emerald-50/50 rounded-2xl p-8 border border-emerald-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-check text-emerald-600"></i>
+                            El Tour Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Reunión informativa previa.</li>
+                            <li>Transporte turístico compartido para todos los tours.</li>
+                            <li>Guía oficial de turismo especializado.</li>
+                            <li>4 noches de alojamiento en Ayacucho (Hostal El Retablo).</li>
+                            <li>Desayunos incluidos.</li>
+                            <li>Degustación de lácteos y papas nativas.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50/50 rounded-2xl p-8 border border-red-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-3">
+                            <i class="fas fa-times text-red-500"></i>
+                            No Incluye
+                        </h3>
+                        <ul class="space-y-4 text-sm text-gray-600">
+                            <li>Tickets de ingreso a los atractivos.</li>
+                            <li>Almuerzos y cenas.</li>
+                            <li>Gastos personales y propinas.</li>
+                            <li>Vuelos o buses interprovinciales.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="lg:col-span-4">
+                <div class="sticky top-32 space-y-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)] border border-gray-200">
+                        <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em] mb-4">Precio del Paquete</p>
+                        <div class="flex items-baseline gap-2 mb-2">
+                            <span class="text-2xl font-medium text-gray-900">S/</span>
+                            <span class="text-5xl font-black text-gray-900 tracking-tighter">450</span>
+                            <span class="text-xl font-bold text-gray-400">.00</span>
+                        </div>
+                        <div class="flex items-center gap-2 mb-8">
+                            <span class="text-sm font-medium text-gray-500">Por persona / Mínimo 2 pax</span>
+                        </div>
+                        <div class="space-y-4 border-t border-gray-100 pt-6 mb-8">
+                            <div class="flex items-center justify-between text-gray-600 text-sm">
+                                <span class="flex items-center gap-2"><i class="far fa-clock w-4 text-center"></i> Duración</span>
+                                <span class="font-bold text-gray-900">5 Días / 4 Noches</span>
+                            </div>
+                        </div>
+                        <a 
+                            href="https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*EXPLORA%20AYACUCHO%205D%2F4N*." 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            class="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all shadow-md hover:shadow-xl"
+                        >
+                            Consultar Ahora
+                            <i class="fab fa-whatsapp text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </div>
+
+    <Footer />
+</Layout>

@@ -1,0 +1,117 @@
+---
+interface Tour {
+    title: string;
+    days: string;
+    image: string;
+    description: string;
+    link: string;
+    itinerary?: string;
+}
+
+const tours: Tour[] = [
+    {
+        title: "EXPLORA AYACUCHO 5D/4N",
+        days: "5 DÍAS / 4 NOCHES",
+        image: "/images/wari.avif",
+        description: "Vive la experiencia completa en Ayacucho: historia en Wari, tradición en Quinua, misticismo en Vilcashuamán y la belleza natural de las Aguas Turquesas de Millpu.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*EXPLORA%20AYACUCHO%205D%2F4N*.",
+        itinerary: "/tours/ayacucho-explora-5d"
+    },
+    {
+        title: "AGUAS TURQUESAS MILLPU",
+        days: "FULL DAY",
+        image: "/images/millpu.avif",
+        description: "Un paraíso natural escondido en los Andes, famoso por sus impresionantes lagunas de aguas cristalinas de color turquesa. Rodeado de montañas y vegetación exuberante, Millpu es el destino perfecto para los amantes de la naturaleza, el senderismo y la fotografía.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*AGUA%20TURQUESAS%20MILLPU*."
+    },
+    {
+        title: "COMPLEJO ARQUEOLÓGICO VILCASHUAMAN",
+        days: "FULL DAY",
+        image: "/images/vilcashuaman.avif",
+        description: "Un fascinante sitio histórico que te transporta a la época incaica. Vilcashuamán es famoso por sus estructuras ceremoniales, templos y la imponente Plaza Principal, que refleja la grandeza de la cultura inca.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*VILCASHUAMAN*."
+    },
+    {
+        title: "CENOTE CHAPALLA",
+        days: "FULL DAY",
+        image: "/images/cenote.avif",
+        description: "Un impresionante paraje natural escondido. Este cenote de aguas cristalinas, rodeado por una exuberante vegetación y formaciones rocosas, es un lugar perfecto para disfrutar de la serenidad de la naturaleza.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*CENOTE%20CHAPALLA*."
+    },
+    {
+        title: "VOLCAN PACHAPUPUM",
+        days: "FULL DAY",
+        image: "/images/volcan.avif",
+        description: "Una majestuosa formación geológica ubicada en los Andes peruanos. Con su imponente presencia, el volcán ofrece vistas espectaculares de paisajes deslumbrantes y terrenos llenos de historia volcánica.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*VOLCAN%20PACHAPUPUM*."
+    },
+    {
+        title: "PAMPA DE LA QUINUA",
+        days: "FULL DAY",
+        image: "/images/pampa.avif",
+        description: "Un histórico campo de batalla donde se libró la crucial batalla por la independencia del país en 1824. Hoy en día, es un lugar emblemático que invita a conocer y reflexionar sobre la historia de la libertad.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*PAMPA%20DE%20LA%20QUINUA*."
+    },
+    {
+        title: "COMPLEJO ARQUEOLÓGICO WARI",
+        days: "FULL DAY",
+        image: "/images/wari.avif",
+        description: "Uno de los más importantes vestigios de la antigua civilización Wari, precursor del Imperio Inca. Presenta impresionantes estructuras arquitectónicas, plazas, y murallas que muestran la avanzada ingeniería y organización social.",
+        link: "https://wa.me/51969188876?text=¡Hola!,%20*Travel%20Millpu*%20estoy%20interesado%20en%20el%20paquete%20*WARI*."
+    }
+];
+---
+<section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-16 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">
+                Vamos a conocer <span class="text-primary">Ayacucho</span>.
+            </h2>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                Descubre la historia, el arte y los paisajes celestiales de la ciudad de las 33 iglesias.
+            </p>
+        </div>
+        
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {tours.map((tour) => (
+                <div class="flex flex-col bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200 h-full">
+                    <div class="relative w-full h-[400px] overflow-hidden bg-gray-200 shrink-0">
+                        <img
+                            class="w-full h-full object-cover"
+                            src={tour.image}
+                            alt={tour.title}
+                            loading="lazy"
+                            decoding="async"
+                        />
+                        <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full text-xs font-black text-primary shadow-sm tracking-wide">
+                            {tour.days}
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col justify-between p-6 h-full">
+                        <div class="text-left mb-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                                {tour.title}
+                            </h3>
+                            <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
+                                {tour.description}
+                            </p>
+                        </div>
+                        
+                        <div class="mt-auto flex flex-col gap-3">
+                            {tour.itinerary && (
+                                <a href={tour.itinerary} class="w-full inline-flex items-center justify-center px-4 py-3 bg-gray-100 text-gray-800 text-sm font-bold rounded-xl hover:bg-gray-200 transition-all duration-300">
+                                    Ver Itinerario
+                                </a>
+                            )}
+                            <a href={tour.link} target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center px-4 py-3 bg-primary text-white text-sm font-bold rounded-xl hover:bg-red-700 transition-all duration-300">
+                                Consultar Ahora
+                                <i class="fab fa-whatsapp ml-2 text-lg" aria-hidden="true" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>

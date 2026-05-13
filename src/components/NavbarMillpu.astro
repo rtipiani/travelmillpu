@@ -4,7 +4,7 @@ const navLinks = [
     { name: "Arequipa", href: "/arequipa" },
     { name: "Puno", href: "/puno" },
     { name: "Cusco", href: "/cusco" },
-    { name: "Iquitos", href: "/iquitos" },
+    { name: "Ayacucho", href: "/ayacucho" },
     { name: "Selva Central", href: "/selva-central" },
     { name: "Chachapoyas", href: "/chachapoyas" },
     { name: "Tarapoto", href: "/tarapoto" },
@@ -12,7 +12,7 @@ const navLinks = [
 ];
 ---
 <nav id="navbar" class="w-full bg-black/10 backdrop-blur-sm py-4 px-6 fixed top-0 left-0 z-50 transition-all duration-500 border-b border-white/5">
-    <div class="container mx-auto flex justify-between items-center">
+    <div class="container mx-auto px-4 lg:px-8 flex justify-between items-center">
         <div class="w-auto">
             <a href="/" aria-label="Inicio">
                 <img 
@@ -23,14 +23,14 @@ const navLinks = [
             </a>
         </div>        
 
-        <ul class="hidden md:flex space-x-6 text-base font-medium text-white">
+        <ul class="hidden xl:flex xl:space-x-8 text-base font-bold text-white items-center">
             {navLinks.map((link) => {
                 const isActive = pathname === link.href || pathname.startsWith(link.href + '/') || (link.href !== '/' && pathname.startsWith('/tours' + link.href));
                 return (
                     <li>
                         <a 
                             href={link.href} 
-                            class={`transition pb-1 ${isActive ? 'text-white font-bold border-b-2 border-primary' : 'text-gray-100 hover:text-white'}`}
+                            class={`transition pb-1 whitespace-nowrap uppercase tracking-wider ${isActive ? 'text-white border-b-2 border-primary' : 'text-gray-100 hover:text-white'}`}
                             aria-current={isActive ? 'page' : undefined}
                         >
                             {link.name}
@@ -40,7 +40,7 @@ const navLinks = [
             })}
         </ul>
 
-        <button id="menu-button" class="md:hidden text-white text-3xl" aria-label="Abrir menú">
+        <button id="menu-button" class="xl:hidden text-white text-3xl" aria-label="Abrir menú">
             <i class="fas fa-bars"></i>
         </button>
     </div>
